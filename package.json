@@ -1,9 +1,9 @@
 {
   "name": "holiday-gift-list",
   "scripts": {
-    "debug client": "node --inspect client/index.js",
+    "client": "node client/index.js",
     "debug example": "node --inspect utils/example.js",
-    "debug server": "node --inspect server/example.js"
+    "server": "nodemon --inspect server/index.js"
   },
   "dependencies": {
     "axios": "^1.2.0",
