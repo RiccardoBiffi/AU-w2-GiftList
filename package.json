@@ -1,5 +1,10 @@
 {
   "name": "holiday-gift-list",
+  "scripts": {
+    "debug client": "node --inspect client/index.js",
+    "debug example": "node --inspect utils/example.js",
+    "debug server": "node --inspect server/example.js"
+  },
   "dependencies": {
     "axios": "^1.2.0",
     "ethereum-cryptography": "^1.1.2",
