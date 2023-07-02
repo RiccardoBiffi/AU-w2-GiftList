@@ -1,8 +1,12 @@
 # Gift List
 
+The client generates a _Merkle tree_ from the niceList file and a _proof_ for the presence of a given name in the list. It then sends this information to the server, which _verifies the proof_ and decides whether to send a gift in response or not.
+
+# Instructions
+
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the depedencies.
 
-There are three folders in this repository:
+There are **three folders** in this repository:
 
 ## Client
 
