@@ -5,10 +5,15 @@ const MerkleTree = require('../utils/MerkleTree');
 const serverUrl = 'http://localhost:1225';
 
 async function main() {
-  // TODO: how do we prove to the server we're on the nice list? 
+  const markleTree = new MerkleTree(niceList);
+  const root = markleTree.getRoot();
+  const name = "Riccardo Biffi";
+  const proof = markleTree.getProof(niceList.findIndex(n => n === name));
 
   const { data: gift } = await axios.post(`${serverUrl}/gift`, {
-    // TODO: add request body parameters here!
+    root: root,
+    name: name,
+    proof: proof,
   });
 
   console.log({ gift });
